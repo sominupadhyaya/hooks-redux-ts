@@ -1,10 +1,10 @@
-import FetchData from "./features/fetch/FetchData";
+import Counter from "./features/count/Counter";
 
 
 const App = () => {
   return (
     <div>
-      <FetchData />
+      <Counter/>
     </div>
   );
 }
