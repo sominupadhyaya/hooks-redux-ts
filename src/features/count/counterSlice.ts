@@ -9,3 +9,11 @@ interface CounterState{
 const initalState: CounterState = {
     value : 0
 }
+
+const counterSlice = createSlice({
+    name : 'counter',
+    initalState,
+    reducers : {
+        
+    }
+})
