@@ -18,8 +18,11 @@ const counterSlice = createSlice({
     reducers : {
         incremented(state){
             state.value++ // no need to do {...state} because redux toolkit uses
-           // immer and wraps state and looks at mutations and turns it into safe and immutable update
+           // immer and wraps state and looks at mutations and turns it into safe 
+           //and immutable update under the hood
         }
     }
 })
 
+export const {incremented} = counterSlice.actions
+export default counterSlice.reducer
