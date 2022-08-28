@@ -20,6 +20,10 @@ const counterSlice = createSlice({
             state.value++ // no need to do {...state} because redux toolkit uses
            // immer and wraps state and looks at mutations and turns it into safe 
            //and immutable update under the hood
+
+        },
+        amountAdded(state, action: PayloadAction<number>){
+            state.value += action.payload
         }
     }
 })
