@@ -4,10 +4,8 @@ import counterReducer from '../features/count/counterSlice'
 
 
 export const store = configureStore({
-    reducer : {
-    
+    reducer : {    
     counter : counterReducer
-    
     }
 })
 
