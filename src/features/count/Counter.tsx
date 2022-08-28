@@ -4,10 +4,21 @@ import { incremented } from './counterSlice'
 
 const Counter = () => {
 
-  const useAppSelector = (state : any) => state.counter.value
+  const count = useAppSelector((state) => state.counter.value)
+
+  const dispatch = useAppDispatch()
+
+  const handleClick = () =>  dispatch(incremented())
 
   return (
-    <div>Counter</div>
+    <>
+    <h1>Counter Example</h1>
+
+    <h2>The count is : </h2> 
+    <h2>{count}</h2>
+
+    <button onClick={handleClick}>Click Me!</button>
+    </>
   )
 }
 
