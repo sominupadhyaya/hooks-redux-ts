@@ -1,6 +1,6 @@
 import {useAppDispatch , useAppSelector} from '../../app/hooks'
 
-import { incremented } from './counterSlice'
+import { incremented, amountAdded } from './counterSlice'
 
 const Counter = () => {
 
@@ -10,6 +10,8 @@ const Counter = () => {
 
   const handleClick = () =>  dispatch(incremented())
 
+  const handleKnownAmtClick = () => dispatch(amountAdded(3)) //adds 3 to count
+
   return (
     <>
     <h1>Counter Example</h1>
@@ -17,7 +19,8 @@ const Counter = () => {
     <h2>The count is : </h2> 
     <h2>{count}</h2>
 
-    <button onClick={handleClick}>Click Me!</button>
+    <button onClick={handleClick}>Increment by 1!</button>
+    <button onClick={handleKnownAmtClick}>Click to increment by 3</button>
     </>
   )
 }
